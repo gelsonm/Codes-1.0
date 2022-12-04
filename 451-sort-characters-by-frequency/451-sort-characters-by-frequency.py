@@ -1,14 +1,13 @@
 class Solution:
     def frequencySort(self, s: str) -> str:
         
-        d = defaultdict(lambda:0)
-        
+        d = {}
         for ch in s:
-            d[ch] += 1
+            d[ch] = d.get(ch,0) + 1
             
-        res = sorted(d.items(),key = lambda item:[-item[1],item[0]])
-        res = [ch*n for ch,n in res]
-        # return ''.join(res.keys())
-        return ''.join(res)
-            
+        ans = sorted(d.items(),key = lambda x:[-x[1],x[0]])
+        
+        ans = [ch*n for ch,n in ans]
+        
+        return ''.join(ans)
         
