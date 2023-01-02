@@ -4,17 +4,17 @@ class Solution:
         up_count = False
         low_count = False
         
-        if word[0].isupper():
-            word = word[1:]
-            
-        for letter in word:
-            if letter.isupper():
+        for i,l in enumerate(word):
+            if l.isupper():
                 if low_count:
                     return False
-                up_count = True
+                if i != 0:
+                    up_count = True
+                    
             else:
                 if up_count:
                     return False
+                
                 low_count = True
                 
         return True
