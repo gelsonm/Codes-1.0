@@ -13,9 +13,9 @@ class Solution:
         "'''"
     
         # XOR bits
-        ans = nums[0]
+        xor = 0
         
-        for num in nums[1:]:
-            ans ^= num
+        for num in nums:
+            xor ^= num
             
-        return ans
+        return xor
