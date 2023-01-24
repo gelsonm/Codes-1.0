@@ -39,6 +39,7 @@ def majorityElement(nums):
     return majority_element
 ```
 **Time Complexity**: O(n) as we are iterating through the array once.
+<br>
 **Space Complexity**: O(n) as we are using a dictionary to store the count of each element in the array.
 
 #### Approach 2: Sorting the array
@@ -47,7 +48,8 @@ def majorityElement(nums):
     nums.sort()
     return nums[len(nums)//2]
 ```
-**Time Complexity**: O(nlogn) as we are sorting the array
+**Time Complexity**: O(nlogn) as we are sorting the array.
+<br>
 **Space Complexity**: O(1) as we are not using any additional data structure.
 
 #### Approach 3: "Boyer-Moore Voting Algorithm"
@@ -67,4 +69,5 @@ def majorityElement(nums):
     return candidate
 ```
 **Time Complexity**: O(n) as we are iterating through the array once.
+<br>
 **Space Complexity**: O(1) as we are only using a few variables to store the count and candidate element.
