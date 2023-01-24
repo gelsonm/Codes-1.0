@@ -21,3 +21,50 @@
 
 <p>&nbsp;</p>
 <strong>Follow-up:</strong> Could you solve the problem in linear time and in <code>O(1)</code> space?</div>
+
+### Solution:
+
+####  Approach 1: Using collections.Counter()
+
+```python
+from collections import Counter
+
+def majorityElement(nums):
+    # Count the occurrences of each element in the array
+    count = Counter(nums)
+    
+    # Find the element with the most occurrences
+    majority_element = max(count, key=count.get)
+    
+    return majority_element
+```
+**Time Complexity**: O(n) as we are iterating through the array once.
+**Space Complexity**: O(n) as we are using a dictionary to store the count of each element in the array.
+
+#### Approach 2: Sorting the array
+```python
+def majorityElement(nums):
+    nums.sort()
+    return nums[len(nums)//2]
+```
+**Time Complexity**: O(nlogn) as we are sorting the array
+**Space Complexity**: O(1) as we are not using any additional data structure.
+
+#### Approach 3: "Boyer-Moore Voting Algorithm"
+
+
+```python
+def majorityElement(nums):
+    count = 0
+    candidate = None
+    for num in nums:
+        if count == 0:
+            candidate = num
+        if num == candidate:
+            count += 1
+        else:
+            count -= 1
+    return candidate
+```
+**Time Complexity**: O(n) as we are iterating through the array once.
+**Space Complexity**: O(1) as we are only using a few variables to store the count and candidate element.
