@@ -22,6 +22,8 @@
 <p>&nbsp;</p>
 <strong>Follow-up:</strong> Could you solve the problem in linear time and in <code>O(1)</code> space?</div>
 
+<p><hr></p>
+
 ### Solution:
 
 ####  Approach 1: Using collections.Counter()
