@@ -4,6 +4,9 @@ class Solution:
         result = ""
 
         for ele in s_splitted:
-            result = ele + " " + result           
-            
-        return result.strip()
+            if result:
+                result = ele + " " + result           
+            else:
+                result = ele
+                
+        return result
