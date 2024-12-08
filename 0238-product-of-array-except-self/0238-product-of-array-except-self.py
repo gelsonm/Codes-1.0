@@ -7,13 +7,13 @@ class Solution:
         for i in range(length):
             ans[i] = ans[i] * curr_product
             curr_product = curr_product * nums[i]
-            print(i,"->",ans[i],end="|")
+            # print(i,"->",ans[i],end="|")
         
-        print("---")
+        # print("---")
         curr_product = 1
         for i in range(length-1,-1,-1):
             ans[i] = ans[i] * curr_product
             curr_product = curr_product * nums[i]
-            print(i,"->",ans[i],end="|")
+            # print(i,"->",ans[i],end="|")
         return ans
             
